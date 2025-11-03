@@ -1,0 +1,115 @@
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoimage {
+  width: 100px;
+  height: 60px;
+}
+.defaultimage {
+  width: 44px;
+  height: 44px;
+}
+.activeimage {
+  width: 44px;
+  height: 44px;
+}
+
+.mobilenav {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 60px 16px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.mobilenavul {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  list-style-type: none;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #403f3d;
+  padding: 0;
+}
+.menucofeecup {
+  display: flex;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.menucart {
+  display: flex;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.mobildekikahveresmi {
+  width: 40px;
+  height: 40px;
+}
+.mobildekisepetresmi {
+  width: 40px;
+  height: 40px;
+}
+
+.desktopnavpart {
+  display: none;
+}
+.mobildekicartveindirim {
+  display: none;
+}
+@media (min-width: 768px) {
+  .mobilenav {
+    display: none;
+  }
+  .defaultimage {
+    display: none;
+  }
+  .activeimage {
+    display: none;
+  }
+  .desktopnavpart {
+    display: flex;
+  }
+  .desktopnavpartul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #403f3d;
+    padding: 0;
+  }
+  .mobildekicartveindirim {
+    display: flex;
+    gap: 32px;
+  }
+  .cartsayiveindirim {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .desktopdakishop {
+    width: 20px;
+    height: 20px;
+  }
+  .desktopkahveifadesi {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .desktopcoffecup {
+    width: 20px;
+    height: 20px;
+  }
+}

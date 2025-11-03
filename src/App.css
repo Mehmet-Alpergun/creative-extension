@@ -1,0 +1,15 @@
+body {
+  background-color: #e1d4c9;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

@@ -1,0 +1,449 @@
+.mainpagecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+}
+/* hero section*/
+.hero {
+  position: relative;
+  width: 348px;
+  height: 552px;
+}
+.offerparagraph {
+  display: inline-block;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 115%;
+}
+.offermenulink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 64px;
+  background-color: #e1d4c9;
+  color: #403f3d;
+  border-radius: 32px;
+  text-decoration: none;
+  gap: 8px;
+}
+.herocoffecup {
+  display: none;
+}
+.offermenulink:hover .herocoffecup {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.offer {
+  position: absolute;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: space-between; */
+  top: 0;
+  left: 0;
+  width: 348px;
+  height: 552px;
+  padding: 60px 16px;
+  box-sizing: border-box;
+}
+.offeralt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*about*/
+.about {
+  max-width: 348px;
+  height: 1580px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.perfectler {
+  font-size: 32px;
+  color: #403f3d;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 125%;
+}
+.aboutimages {
+  width: 348px;
+  height: 1220px;
+}
+.aboutimagescolumn1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.aboutimagescolumn2 {
+  display: none;
+}
+.column1first {
+  width: 348px;
+  height: 590px;
+  object-fit: cover;
+  background-image: url("./images/column-1.png");
+  background-size: cover; /* Bu satır eklendi */
+  background-position: center; /* Opsiyonel ama önerilir */
+  background-repeat: no-repeat; /* Tekrarlamasın diye */
+  border-radius: 20px;
+}
+
+.column1second {
+  width: 348px;
+  height: 590px;
+  object-fit: cover;
+  background-image: url("./images/column-2.png");
+  background-size: cover; /* Bu satır eklendi */
+  background-position: center; /* Opsiyonel ama önerilir */
+  background-repeat: no-repeat; /* Tekrarlamasın diye */
+  border-radius: 20px;
+}
+/*mobile app*/
+.mobileapp {
+  max-width: 348px;
+  height: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mobileappoffer {
+  max-width: 348px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mobileappdownload {
+  color: #403f3d;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+.mobileappresource {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ikiicon {
+  max-width: 200px;
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.appleicon {
+  max-width: 200px;
+  height: 64px;
+  border: 1px solid;
+  border-radius: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 20px;
+  gap: 8px;
+}
+.appleresim {
+  width: 36px;
+  height: 36px;
+}
+.appleyani {
+  color: #403f3d;
+  max-width: 78px;
+  height: 40px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.appleyaziboyut1 {
+  font-size: 10px;
+}
+.appleyaziboyut2 {
+  font-size: 16px;
+}
+.mobilescreensimage {
+  width: 348px;
+  height: 348px;
+}
+@media (min-width: 768px) {
+  /* hero section*/
+  .hero {
+    position: relative;
+    width: 688px;
+    height: 644px;
+  }
+  .offer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px 60px;
+    box-sizing: border-box;
+  }
+  .offerparagraph {
+    display: inline-block;
+    font-size: 72px;
+    font-weight: 600;
+    width: 100%;
+    line-height: 105%;
+  }
+  /*about*/
+  .about {
+    max-width: 688px;
+    height: 1710px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .aboutimages {
+    width: 688px;
+    height: 1220px;
+  }
+
+  .perfectler {
+    font-size: 59px;
+    color: #403f3d;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 125%;
+    text-align: left;
+  }
+
+  .aboutimagescolumn1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .aboutimagescolumn2 {
+    display: none;
+  }
+  .column1first {
+    width: 688px;
+    height: 590px;
+    object-fit: cover;
+    background-image: url("../images/column-1.png");
+    background-size: cover; /* Bu satır eklendi */
+    background-position: center; /* Opsiyonel ama önerilir */
+    background-repeat: no-repeat; /* Tekrarlamasın diye */
+    border-radius: 20px;
+  }
+  .column1second {
+    width: 688px;
+    height: 590px;
+    object-fit: cover;
+    background-image: url("../images/column-2.png");
+    background-size: cover; /* Bu satır eklendi */
+    background-position: center; /* Opsiyonel ama önerilir */
+    background-repeat: no-repeat; /* Tekrarlamasın diye */
+    border-radius: 20px;
+  }
+  /*mobile app*/
+  .mobileapp {
+    max-width: 688px;
+    height: 1072px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .mobileappoffer {
+    max-width: 688px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .mobileappdownload {
+    color: #403f3d;
+    font-size: 60px;
+    line-height: 1.25;
+    font-weight: bold;
+  }
+  .ikiicon {
+    max-width: 420px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .appleicon {
+    width: 200px;
+    height: 64px;
+    border: 1px solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+    gap: 8px;
+  }
+  .mobilescreensimage {
+    width: 630px;
+    height: 630px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* hero section*/
+  .hero {
+    position: relative;
+    width: 1360px;
+    height: 644px;
+  }
+
+  .offer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px 100px;
+    box-sizing: border-box;
+  }
+  .offerparagraph {
+    display: inline-block;
+    font-size: 72px;
+    font-weight: 600;
+    width: 100%;
+    line-height: 105%;
+  }
+  .offeralt {
+    width: 530px;
+    height: 444px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  /*about*/
+  .about {
+    max-width: 1360px;
+    height: 1325px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .aboutimages {
+    width: 1360px;
+    height: 1060px;
+    display: flex;
+    gap: 40px;
+  }
+
+  .perfectler {
+    font-size: 59px;
+    color: #403f3d;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 125%;
+    text-align: left;
+  }
+
+  .aboutimagescolumn1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .aboutimagescolumn2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .column1first {
+    width: 660px;
+    height: 590px;
+    object-fit: cover;
+    background-image: url("../images/column-1.png");
+    background-size: cover; /* Bu satır eklendi */
+    background-position: center; /* Opsiyonel ama önerilir */
+    background-repeat: no-repeat; /* Tekrarlamasın diye */
+    border-radius: 20px;
+  }
+  .column1second {
+    width: 660px;
+    height: 430px;
+    object-fit: cover;
+    background-image: url("../images/box.png");
+    background-size: cover; /* Bu satır eklendi */
+    background-position: center; /* Opsiyonel ama önerilir */
+    background-repeat: no-repeat; /* Tekrarlamasın diye */
+    border-radius: 20px;
+  }
+  .column2first {
+    width: 660px;
+    height: 430px;
+    object-fit: cover;
+    background-image: url("../images/manbox.png");
+    background-size: cover; /* Bu satır eklendi */
+    background-position: center; /* Opsiyonel ama önerilir */
+    background-repeat: no-repeat; /* Tekrarlamasın diye */
+    border-radius: 20px;
+  }
+  .column2second {
+    width: 660px;
+    height: 590px;
+    object-fit: cover;
+    background-image: url("../images/column-2.png");
+    background-size: cover; /* Bu satır eklendi */
+    background-position: center; /* Opsiyonel ama önerilir */
+    background-repeat: no-repeat; /* Tekrarlamasın diye */
+    border-radius: 20px;
+  }
+  /*mobile*/
+  .mobileapp {
+    max-width: 1360px;
+    height: 630px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+  }
+  .mobileappoffer {
+    max-width: 630px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .mobileappdownload {
+    color: #403f3d;
+    font-size: 60px;
+    line-height: 1.25;
+    font-weight: bold;
+  }
+  .ikiicon {
+    max-width: 420px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .appleicon {
+    width: 200px;
+    height: 64px;
+    border: 1px solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+    gap: 8px;
+  }
+  .mobilescreensimage {
+    width: 630px;
+    height: 630px;
+  }
+}

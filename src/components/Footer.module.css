@@ -1,0 +1,122 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 16px;
+  gap: 40px;
+  box-sizing: border-box;
+  background-color: #665f55;
+  border-radius: 40px;
+}
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.offersipyazisi {
+  color: #e1d4c9;
+  font-size: 32px;
+  font-weight: 600;
+}
+.offercofeeyazisi {
+  color: #b0907a;
+  font-size: 32px;
+  font-weight: 600;
+}
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.contactsinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contactus {
+  font-size: 24px;
+  color: #e1d4c9;
+}
+.contacs {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e1d4c9;
+}
+.konumcontainer {
+  display: flex;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+.konumcontainer:hover {
+  border-bottom: 1px solid #e1d4c9;
+}
+.phonecontainer {
+  display: flex;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+.phonecontainer:hover {
+  border-bottom: 1px solid #e1d4c9;
+}
+.clockcontainer {
+  display: flex;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+.clockcontainer:hover {
+  border-bottom: 1px solid #e1d4c9;
+}
+.footerbr {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 60px;
+    gap: 40px;
+    box-sizing: border-box;
+    background-color: #665f55;
+    border-radius: 40px;
+  }
+  .offersipyazisi {
+    color: #e1d4c9;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  .offercofeeyazisi {
+    color: #b0907a;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  .footerbr {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 100px;
+    gap: 100px;
+    box-sizing: border-box;
+    background-color: #665f55;
+    border-radius: 40px;
+  }
+  .footerbr {
+    display: flex;
+  }
+}
