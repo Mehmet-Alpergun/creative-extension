@@ -150,7 +150,7 @@ export default function Register() {
       console.log(data);
 
       if (response.ok) {
-        setSuccessMessage("✅ Login successfully, redirecting to menu..."); // ✅ mesaj göster
+        setSuccessMessage("✅ Register successfully, redirecting to menu..."); // ✅ mesaj göster
 
         localStorage.setItem(
           "user",
