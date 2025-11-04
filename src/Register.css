@@ -1,0 +1,173 @@
+genelcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.registercontainer {
+  width: 1360px;
+  height: 391px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.registirationyazisi {
+  font-size: 60px;
+  font-weight: 600;
+  color: #403f3d;
+  height: 75px;
+}
+.herseydahil {
+  height: 276px;
+  width: 1360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.herseydahilalti {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+}
+.uclugrup {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  width: 1248px;
+}
+.ucunbiri {
+  width: 400px;
+  /*height: 84px;*/
+  height: 99px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.uclununinputu {
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  border: 1px solid #c1b6ad;
+  width: 400px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: transparent;
+  font-size: 16px;
+}
+.uclununinputu.active {
+  border: 1px solid red;
+}
+.uyari {
+  display: none;
+  color: red;
+  font-size: 16px;
+}
+
+.uyari.active {
+  display: contents;
+}
+.dortlugrup {
+  display: flex;
+  gap: 24px;
+  width: 1360px;
+}
+.dordunbiri {
+  width: 260px;
+  height: 114px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dorduninputu {
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  border: 1px solid #c1b6ad;
+  width: 260px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: transparent;
+  font-size: 16px;
+}
+.dorduninputu.active {
+  border: 1px solid red;
+}
+.dordunsonu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 508px;
+  height: 66px;
+}
+.butonundivi {
+  width: 1360px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kayitolbutonu {
+  width: 200px;
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #665f55;
+  background: transparent;
+  color: #403f3d;
+}
+
+.error {
+  display: flex;
+  color: red;
+  font-size: 16px;
+}
+.register-result {
+  margin-top: 1rem;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: none; /* Başlangıçta gizli */
+}
+
+/* Başarılı mesaj */
+.register-result.success {
+  background-color: #e6f4ea;
+  color: #20794d;
+  border: 1px solid #b6e2c1;
+  display: block;
+}
+
+/* Hatalı mesaj */
+.register-result.error {
+  background-color: #fbeaea;
+  color: #b03535;
+  border: 1px solid #f1c0c0;
+  display: block;
+}
+.input-error {
+  border: 2px solid red;
+}
+
+.input-success {
+  border: 2px solid green;
+}
+
+.uyari {
+  color: red;
+  font-size: 12px;
+  display: block;
+}
+
+.success-message {
+  display: flex;
+  justify-content: center;
+}
+.hata {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
