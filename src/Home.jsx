@@ -84,7 +84,7 @@ export default function Home() {
                 and those seeking a warm and inviting space to enjoy their
                 favorite beverage.
               </span>
-              <Link className={classes.offermenulink}>
+              <Link className={classes.offermenulink} to={"/products"}>
                 menu{" "}
                 <img
                   src={coffecup}

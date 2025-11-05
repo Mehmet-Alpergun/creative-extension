@@ -1,0 +1,43 @@
+.preview {
+  width: 310px;
+  height: 506px;
+  border-radius: 40px;
+  border: 1px solid #c1b6ad;
+  cursor: pointer;
+}
+.previewimage {
+  border-radius: 40px;
+  width: 310px;
+  height: 310px;
+  cursor: pointer;
+}
+.description {
+  width: 310px;
+  height: 196px;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+}
+.titletogether {
+  width: 270px;
+  height: 114px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.bigtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+}
+.smalltitle {
+  font-size: 16px;
+  line-height: 150%;
+  width: 270px;
+  height: 72px;
+}
+.titleprice {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
