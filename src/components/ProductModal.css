@@ -1,0 +1,302 @@
+.modal-container {
+  height: 100vh;
+  width: 100vw; /* burada düzeltme yapıldı */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: fixed; /* ekranın üstüne sabitlenmesi için */
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3); /* opsiyonel: saydam arka plan */
+}
+.modalcarpi {
+  width: 342px;
+  display: flex;
+  justify-content: end;
+}
+.modalresmi {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+.modal {
+  width: 342px;
+  /* height: 540px; */
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 40px;
+  color: #403f3d;
+  background-color: #e1d4c9;
+}
+.resimmodal {
+  display: none;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  /* height: 594px; */
+  gap: 10px;
+  justify-content: center;
+}
+.infocontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 90px;
+  color: #403f3d;
+}
+.infotitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+.infodescription {
+  font-size: 16px;
+}
+
+.sizecontainer {
+  width: 310px;
+  /* height: 132px; */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.boyut {
+  width: 100%;
+  height: 46px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  gap: 8px;
+  padding: 8px 40px 8px 8px;
+  box-sizing: border-box;
+  background-color: #e1d4c9;
+  cursor: pointer;
+}
+.boyut.selected {
+  background-color: #665f55;
+}
+.boyut:hover {
+  background-color: #665f55;
+}
+.boyut:hover .daire {
+  background-color: #e1d4c9;
+  color: #403f3d;
+}
+.boyut:hover .miktar {
+  color: #e1d4c9;
+}
+
+.daire {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c1b6ad;
+  border-radius: 100%;
+  color: #403f3d;
+  cursor: pointer;
+}
+.daire.selected {
+  background-color: #e1d4c9;
+  color: #403f3d;
+}
+
+.miktar {
+  color: #403f3d;
+  cursor: pointer;
+}
+.miktar.selected {
+  color: #e1d4c9;
+}
+
+.boyutlar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.additivescontainer {
+  width: 310px;
+  /* height: 132px; */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.additivies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.modaltotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  width: 310px;
+  height: 30px;
+  color: #403f3d;
+}
+.uyariyazisi {
+  border-top: 1px solid #c1b6ad;
+  display: flex;
+  gap: 8px;
+  width: 310px;
+  height: 66px;
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+.uyariyazisininyazisi {
+  font-size: 10px;
+  font-weight: 600;
+}
+.addtoproduct {
+  width: 310px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px 78px;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  background-color: #e1d4c9;
+  cursor: pointer;
+}
+.addtoproduct:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
+}
+.resimmodal {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 688px;
+    /* height: 540px; */
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 40px;
+    color: #403f3d;
+    background-color: #e1d4c9;
+    display: flex;
+    gap: 20px;
+  }
+  .resimmodal {
+    display: flex;
+    justify-content: flex-start;
+    height: 594px;
+    width: 310px;
+  }
+  .modaldakiresim {
+    width: 310px;
+    height: 310px;
+    border-radius: 40px;
+    align-items: start;
+  }
+  .modalcarpi {
+    width: 688px;
+    display: flex;
+    justify-content: end;
+  }
+}
+@media (min-width: 1440px) {
+  .modal {
+    width: 800px;
+    /* height: 540px; */
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 40px;
+    color: #403f3d;
+    background-color: #e1d4c9;
+    display: flex;
+    gap: 20px;
+  }
+  .resimmodal {
+    display: flex;
+    justify-content: flex-start;
+    height: 432px;
+    width: 310px;
+  }
+  .modaldakiresim {
+    width: 310px;
+    height: 310px;
+    border-radius: 40px;
+    align-items: start;
+  }
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    width: 438px;
+    /* height: 594px; */
+    gap: 20px;
+    justify-content: center;
+  }
+  .sizecontainer {
+    width: 438px;
+    /* height: 132px; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .boyutlar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+  .addtoproduct {
+    width: 438px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 78px;
+    border-radius: 100px;
+    border: 1px solid #665f55;
+    background-color: #e1d4c9;
+    cursor: pointer;
+  }
+
+  .addtoproduct:hover {
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
+  .uyariyazisi {
+    border-top: 1px solid #c1b6ad;
+    display: flex;
+    gap: 8px;
+    width: 438px;
+    height: 40px;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+  }
+  .modalcarpi {
+    width: 800px;
+    display: flex;
+    justify-content: end;
+  }
+  .modaltotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    width: 438px;
+    height: 30px;
+    color: #403f3d;
+  }
+  .additivies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+}

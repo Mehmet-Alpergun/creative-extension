@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import "./Menu.css";
 import Cart from "./components/Cart";
+import ProductModal from "./components/ProductModal";
+
 export default function Menu() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [category, setCategory] = useState("coffee"); // default coffee
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -14,6 +17,8 @@ export default function Menu() {
         const res = await fetch(
           "https://6kt29kkeub.execute-api.eu-central-1.amazonaws.com/products"
         );
+        if (!res.ok) throw new Error("Veri çekilemedi!");
+
         const json = await res.json();
         const cleanedData = json.data.map((item) => ({
           ...item,
@@ -138,13 +143,24 @@ export default function Menu() {
             {!loading && !error && (
               <>
                 {filteredProducts.map((p) => (
-                  <Cart key={p.id} item={p} />
+                  <Cart
+                    key={p.id}
+                    item={p}
+                    onClick={() => setSelectedProduct(p)}
+                  />
                 ))}
               </>
             )}
           </div>
         </div>
       </div>
+      <div></div>
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </>
   );
 }

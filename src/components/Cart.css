@@ -17,6 +17,9 @@
   box-sizing: border-box;
   padding: 20px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .titletogether {
   width: 270px;
