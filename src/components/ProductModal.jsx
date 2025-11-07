@@ -1,7 +1,9 @@
+import { useDispatch } from "react-redux";
 import "./ProductModal.css";
 import { useEffect, useState } from "react";
-
+import { addtocart } from "./store/productsSlice";
 export default function ProductModal({ product, onClose }) {
+  const dispatch = useDispatch();
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -151,8 +153,9 @@ export default function ProductModal({ product, onClose }) {
     };
 
     // 🛒 LocalStorage’a ekle
-    const updatedCart = [...currentCart, newItem];
-    localStorage.setItem("selectedProducts", JSON.stringify(updatedCart));
+    // const updatedCart = [...currentCart, newItem];
+    // localStorage.setItem("selectedProducts", JSON.stringify(updatedCart));
+    dispatch(addtocart(newItem));
 
     alert(`${product.name} added to cart!`);
     onClose();

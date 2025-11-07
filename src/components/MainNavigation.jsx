@@ -7,24 +7,31 @@ import shoppingbag from "../assets/images/shopping-bag.png";
 
 import classes from "./MainNav.module.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function MainNavigation() {
-  const [user, setUser] = useState(null);
-  const [selectedProducts, setSelectedProducts] = useState([]);
+  const cekilenveri = useSelector((state) => state.products.items);
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
 
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    const storedCart =
-      JSON.parse(localStorage.getItem("selectedProducts")) || [];
+  // const [selectedProducts, setSelectedProducts] = useState([]);
+  const productNumber = cekilenveri.length;
+  const toplamNegotiation = cekilenveri.reduce((acc, item) => {
+    return acc + (item.negotiation || 0);
+  }, 0);
 
-    setUser(storedUser);
-    setSelectedProducts(storedCart);
-  }, []);
+  // useEffect(() => {
+  //   const storedUser = JSON.parse(localStorage.getItem("user"));
+
+  //   setUser(storedUser);
+  // }, []);
   const [ismobilemenuopen, setIsmenuMobilOpen] = useState(false);
   function chagemenuvisibility() {
     setIsmenuMobilOpen((e) => !e);
   }
-  const showCartIcon = user || selectedProducts.length > 0;
+  const showCartIcon = user || productNumber > 0;
 
   return (
     <>
@@ -64,8 +71,12 @@ export default function MainNavigation() {
                   alt="coffeecup"
                   className={classes.desktopdakishop}
                 />
-                <span>2</span>
-                <span>indi</span>
+                <span>{productNumber > 0 ? productNumber : ""}</span>
+                {user ? (
+                  <span>{toplamNegotiation == 0 ? "" : toplamNegotiation}</span>
+                ) : (
+                  ""
+                )}
               </Link>
             )}
             <Link to="/products" className={classes.desktopkahveifadesi}>
