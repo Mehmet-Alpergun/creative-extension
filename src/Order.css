@@ -1,0 +1,180 @@
+.ordercontainer {
+  width: 1360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.cartyazisi {
+  height: 75px;
+  font-size: 60px;
+  font-weight: 600;
+  color: #403f3d;
+}
+
+.productscontainer {
+  width: 1360px;
+  /* height: 212px; */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.resultcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1360px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.butonlardivi {
+  width: 1360px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.signinbutonu {
+  width: 200px;
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #665f55;
+  background: transparent;
+  color: #403f3d;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.registerbutonu {
+  width: 200px;
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #665f55;
+  background: transparent;
+  color: #403f3d;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.confirmbutonu {
+  width: 1360px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirm {
+  width: 200px;
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #665f55;
+  background: transparent;
+  color: #403f3d;
+  cursor: pointer;
+  font-weight: 600;
+}
+.userresultcontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 1360px;
+  gap: 12px;
+}
+.usertotalfiyat {
+  display: flex;
+  justify-content: space-between;
+  width: 1360px;
+  height: 30px;
+}
+.usertotalyazisi {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.hemindirimhemgercek {
+  display: flex;
+  gap: 20px;
+}
+.usertotalfiyatsecond {
+  display: flex;
+  justify-content: space-between;
+  width: 1360px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3d;
+}
+
+.usersizproductcontianer {
+  display: flex;
+  justify-content: space-between;
+  width: 1360px;
+  height: 100px;
+  align-items: center;
+}
+.productinfocontainer {
+  width: 1107px;
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.proname {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.urunfiyati {
+  width: 69px;
+  height: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.direktfiyat {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.ilkfiyat {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: line-through;
+  color: #908982;
+}
+.indirimlifiyat {
+  font-size: 24px;
+  font-weight: 600;
+  color: #403f3d;
+}
+.userliproductcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1360px;
+  height: 100px;
+  align-items: center;
+}
+.userliproductinfoco {
+  width: 1018px;
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.userurunfiyati {
+  /* width: 69px; */
+  height: 30px;
+  display: flex;
+  /* justify-content: end; */
+  align-items: center;
+  gap: 20px;
+}
