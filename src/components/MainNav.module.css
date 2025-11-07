@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  width: 1360px;
+  /* width: 1360px; */
+  width: 348px;
 }
 
 .logoimage {
@@ -44,6 +45,7 @@
   font-size: 32px;
   font-weight: 600;
   color: #403f3d;
+  text-decoration: none;
 }
 .menucart {
   display: flex;
@@ -51,6 +53,7 @@
   font-size: 32px;
   font-weight: 600;
   color: #403f3d;
+  text-decoration: none;
 }
 .mobildekikahveresmi {
   width: 40px;
@@ -68,6 +71,14 @@
   display: none;
 }
 @media (min-width: 768px) {
+  .headercontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* width: 1360px; */
+    width: 688px;
+  }
   .mobilenav {
     display: none;
   }
@@ -99,6 +110,9 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    text-decoration: none;
+    color: #403f3d;
+    font-weight: 600;
   }
   .desktopdakishop {
     width: 20px;
@@ -108,9 +122,21 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    text-decoration: none;
+    color: #403f3d;
+    font-weight: 600;
   }
   .desktopcoffecup {
     width: 20px;
     height: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .headercontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 1360px;
   }
 }

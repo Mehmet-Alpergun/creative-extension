@@ -82,6 +82,31 @@ export default function Order() {
     }
   };
 
+  /** */
+
+  const handleDeleteProduct = (uniqCartId) => {
+    // uniqCartId'ye göre filtreleme yap
+    const updatedProducts = products.filter(
+      (pro) => pro.uniqCartId !== uniqCartId
+    );
+
+    // state ve localStorage güncelle
+    setProducts(updatedProducts);
+    localStorage.setItem("selectedProducts", JSON.stringify(updatedProducts));
+
+    // toplam fiyatları yeniden hesapla
+    let totalOrg = 0;
+    let totalDisc = 0;
+    updatedProducts.forEach((pro) => {
+      const originalPrice = pro.originalPrice;
+      const discountedPrice = pro.discountedPrice || pro.originalPrice;
+      totalOrg += originalPrice;
+      totalDisc += discountedPrice;
+    });
+    setTotalOriginal(totalOrg);
+    setTotalDiscounted(totalDisc);
+  };
+
   return (
     <>
       <div className="ordercontainer">
@@ -102,12 +127,13 @@ export default function Order() {
         <div className="productscontainer">
           {user
             ? products && products.length > 0
-              ? products.map((pro, index) => (
-                  <div className="userliproductcontainer" key={index}>
+              ? products.map((pro) => (
+                  <div className="userliproductcontainer" key={pro.uniqCartId}>
                     <img
                       src="./images/trash.svg"
                       alt="trash"
                       style={{ width: "24px", height: "24px" }}
+                      onClick={() => handleDeleteProduct(pro.uniqCartId)}
                     />
                     <img
                       src={`/images/${pro.imageUrl}.png`}
@@ -133,12 +159,13 @@ export default function Order() {
                 ))
               : ""
             : products && products.length > 0
-            ? products.map((pro, index) => (
-                <div className="usersizproductcontianer" key={index}>
+            ? products.map((pro) => (
+                <div className="usersizproductcontianer" key={pro.uniqCartId}>
                   <img
                     src="./images/trash.svg"
                     alt="trash"
                     style={{ width: "24px", height: "24px" }}
+                    onClick={() => handleDeleteProduct(pro.uniqCartId)}
                   />
                   <img
                     src={`/images/${pro.imageUrl}.png`}

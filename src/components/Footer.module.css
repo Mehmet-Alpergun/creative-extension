@@ -7,7 +7,8 @@
   box-sizing: border-box;
   background-color: #665f55;
   border-radius: 40px;
-  width: 1360px;
+  /* width: 1360px; */
+  width: 348px;
 }
 .offer {
   display: flex;
@@ -90,6 +91,7 @@
     box-sizing: border-box;
     background-color: #665f55;
     border-radius: 40px;
+    width: 688px;
   }
   .offersipyazisi {
     color: #e1d4c9;
@@ -116,6 +118,7 @@
     box-sizing: border-box;
     background-color: #665f55;
     border-radius: 40px;
+    width: 1360px;
   }
   .footerbr {
     display: flex;
