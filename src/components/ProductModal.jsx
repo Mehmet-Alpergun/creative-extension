@@ -174,7 +174,7 @@ export default function ProductModal({ product, onClose }) {
       <div className="modal-container">
         <div className="modalcarpi">
           <img
-            src="/images/buttonclose.svg"
+            src="./images/buttonclose.svg"
             alt="buttonclose"
             className="modalresmi"
             onClick={onClose}
@@ -199,7 +199,7 @@ export default function ProductModal({ product, onClose }) {
       <div className="modal-container">
         <div className="modalcarpi">
           <img
-            src="/images/buttonclose.svg"
+            src="./images/buttonclose.svg"
             alt="buttonclose"
             className="modalresmi"
             onClick={onClose}

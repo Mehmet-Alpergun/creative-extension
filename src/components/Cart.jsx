@@ -6,7 +6,7 @@ export default function Cart({ item, onClick }) {
     <>
       <div className="preview" onClick={onClick}>
         <img
-          src={`/images/${item.imageUrl}.png`}
+          src={`./images/${item.imageUrl}.png`}
           alt="asdasd"
           className="previewimage"
         />

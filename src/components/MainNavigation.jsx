@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import logo from "/images/logo.png";
-import stateactive from "/images/State=active.png";
-import statedefault from "/images/State=default.png";
-import coffeecup from "/images/coffee-cup.png";
-import shoppingbag from "/images/shopping-bag.png";
+import logo from "./images/logo.png";
+import stateactive from "./images/State=active.png";
+import statedefault from "./images/State=default.png";
+import coffeecup from "./images/coffee-cup.png";
+import shoppingbag from "./images/shopping-bag.png";
 
 import classes from "./MainNav.module.css";
 import { Link } from "react-router-dom";

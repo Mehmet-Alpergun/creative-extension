@@ -144,7 +144,7 @@ export default function Order() {
                       onClick={() => handleDeleteProduct(pro.uniqCartId)}
                     />
                     <img
-                      src={`/images/${pro.imageUrl}.png`}
+                      src={`./images/${pro.imageUrl}.png`}
                       alt="image"
                       style={{ width: "100px", height: "100px" }}
                     />
@@ -176,7 +176,7 @@ export default function Order() {
                     onClick={() => handleDeleteProduct(pro.uniqCartId)}
                   />
                   <img
-                    src={`/images/${pro.imageUrl}.png`}
+                    src={`./images/${pro.imageUrl}.png`}
                     alt="image"
                     style={{ width: "100px", height: "100px" }}
                   />
