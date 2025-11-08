@@ -12,6 +12,17 @@ export default function ProductModal({ product, onClose }) {
 
   const [user, setUser] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [discountedPrice, setDiscountedPrice] = useState(0);
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -49,43 +60,47 @@ export default function ProductModal({ product, onClose }) {
   }, []);
   useEffect(() => {
     if (!products) return;
-    let basePrice = 0.0;
+
+    let originalBasePrice = 0.0; // indirimsiz fiyat
+    let discountedBasePrice = 0.0; // indirimli fiyat
+
     const hasUser = Boolean(user);
 
-    // 🧩 Boyut fiyatı
+    // 🧩 Boyut fiyatı (size)
     const sizeData = products?.sizes[selectedSize];
     if (sizeData) {
-      const rawPrice = hasUser
-        ? sizeData.discountPrice
-          ? sizeData.discountPrice
-          : sizeData.price
-        : sizeData.price;
+      const sizeOriginal = parseFloat(sizeData.price) || 0;
+      const sizeDiscounted =
+        parseFloat(sizeData.discountPrice ?? sizeData.price) || 0;
 
-      // Fiyatı sadece number’a çevir, toFixed yok
-      const sizePrice = parseFloat(rawPrice);
-
-      basePrice += isNaN(sizePrice) ? 0 : sizePrice;
+      originalBasePrice += sizeOriginal;
+      discountedBasePrice += sizeDiscounted;
     }
 
     // 🍫 Additives fiyatları
     selectedAdditives.forEach((addName) => {
       const add = products.additives.find((a) => a.name === addName);
       if (add) {
-        const rawAddPrice = hasUser
-          ? add.discountPrice
-            ? add.discountPrice
-            : add.price
-          : add.price;
+        const addOriginal = parseFloat(add.price) || 0;
+        const addDiscounted = parseFloat(add.discountPrice ?? add.price) || 0;
 
-        const addPrice = parseFloat(rawAddPrice);
-        basePrice += isNaN(addPrice) ? 0 : addPrice;
+        originalBasePrice += addOriginal;
+        discountedBasePrice += addDiscounted;
       }
     });
 
-    // 🎯 Sadece burada 2 ondalık formata getiriyoruz
-    setTotalPrice(parseFloat(basePrice.toFixed(2)));
-    console.log(selectedAdditives);
-    console.log(selectedSize);
+    // 💰 Toplamları 2 ondalığa yuvarla
+    const finalOriginal = parseFloat(originalBasePrice.toFixed(2));
+    const finalDiscounted = parseFloat(discountedBasePrice.toFixed(2));
+
+    // 🧾 State'leri güncelle
+    setTotalPrice(finalOriginal); // indirimsiz toplam
+    setDiscountedPrice(finalDiscounted); // indirimli toplam
+
+    console.log("Selected size:", selectedSize);
+    console.log("Selected additives:", selectedAdditives);
+    console.log("Original price:", finalOriginal);
+    console.log("Discounted price:", finalDiscounted);
   }, [selectedSize, selectedAdditives, products, user]);
 
   const handleAddToCart = () => {
@@ -171,7 +186,15 @@ export default function ProductModal({ product, onClose }) {
 
   if (error) {
     return (
-      <div className="modal-container">
+      <div
+        className="modal-container"
+        onClick={(e) => {
+          // Eğer tıklama modalın kendisindeyse, yani modalın dışına tıklanmışsa
+          if (e.target.classList.contains("modal-container")) {
+            onClose();
+          }
+        }}
+      >
         <div className="modalcarpi">
           <img
             src="./images/buttonclose.svg"
@@ -293,10 +316,22 @@ export default function ProductModal({ product, onClose }) {
                   ))}
               </div>
             </div>
-            <div className="modaltotal">
-              <span>Total:</span>
-              <span>${totalPrice?.toFixed(2)}</span>
-            </div>
+            {user ? (
+              <div className="modaldakifiyatdivi">
+                <span className="userligercekfiyat">
+                  ${totalPrice?.toFixed(2)}
+                </span>
+                <span className="userlidisfiyat">
+                  ${discountedPrice?.toFixed(2)}
+                </span>
+              </div>
+            ) : (
+              <div className="modaltotal">
+                <span>Total:</span>
+                <span>${totalPrice?.toFixed(2)}</span>
+              </div>
+            )}
+
             <div className="uyariyazisi">
               <img
                 src="./images/infoempty.svg"

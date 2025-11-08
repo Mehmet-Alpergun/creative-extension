@@ -66,6 +66,22 @@
 .nextBtn {
   display: none;
 }
+.homesliderfiyat {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.homeslidergercekfiyat {
+  color: #908982;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: line-through;
+}
+.homesliderdisfiyat {
+  font-weight: 600;
+  color: #403f3d;
+  font-size: 24px;
+}
 
 /*
 .slider {

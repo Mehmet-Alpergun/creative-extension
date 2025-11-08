@@ -172,6 +172,7 @@
   width: 348px;
   height: 348px;
 }
+
 @media (min-width: 768px) {
   /* hero section*/
   .hero {

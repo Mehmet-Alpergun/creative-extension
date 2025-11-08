@@ -140,7 +140,11 @@ export default function Order() {
                     <img
                       src="./images/trash.svg"
                       alt="trash"
-                      style={{ width: "24px", height: "24px" }}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        cursor: "pointer",
+                      }}
                       onClick={() => handleDeleteProduct(pro.uniqCartId)}
                     />
                     <img
@@ -172,7 +176,7 @@ export default function Order() {
                   <img
                     src="./images/trash.svg"
                     alt="trash"
-                    style={{ width: "24px", height: "24px" }}
+                    style={{ width: "24px", height: "24px", cursor: "pointer" }}
                     onClick={() => handleDeleteProduct(pro.uniqCartId)}
                   />
                   <img

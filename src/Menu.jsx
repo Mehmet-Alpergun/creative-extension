@@ -137,9 +137,9 @@ export default function Menu() {
             </div>
           </div>
           {/* ajsd */}
+          {loading && <p>Loading...</p>}
+          {error && <p>Something went wrong! please refresh page</p>}
           <div className="menu-products">
-            {loading && <p>Loading...</p>}
-            {error && <p>Something went wrong!</p>}
             {!loading && !error && (
               <>
                 {filteredProducts.map((p) => (

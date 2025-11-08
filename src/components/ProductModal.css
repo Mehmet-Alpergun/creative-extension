@@ -141,6 +141,22 @@
   height: 30px;
   color: #403f3d;
 }
+.modaldakifiyatdivi {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+.userligercekfiyat {
+  color: #908982;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: line-through;
+}
+.userlidisfiyat {
+  color: #403f3d;
+  font-size: 24px;
+  font-weight: 600;
+}
 .uyariyazisi {
   border-top: 1px solid #c1b6ad;
   display: flex;

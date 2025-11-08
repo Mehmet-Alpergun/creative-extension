@@ -70,6 +70,11 @@
 .mobildekicartveindirim {
   display: none;
 }
+.negotiotion {
+  color: #908982;
+  font-weight: 600;
+  text-decoration: line-through;
+}
 @media (min-width: 768px) {
   .headercontainer {
     display: flex;

@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 import classes from "./Home.module.css";
 // import video from "./assets/images/2909914-uhd_3840_2024_24fps.mp4";
-import video from "./images/2909914-uhd_3840_2024_24fps.mp4";
+import video from "/images/2909914-uhd_3840_2024_24fps.mp4";
 
-import coffecup from "./images/coffee-cup.png";
+import coffecup from "/images/coffee-cup.png";
 import { useEffect, useState } from "react";
 import "./sliderSection.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 // import appleicon from "../src/assets/images/appleicon.svg";
-import appleicon from "./images/appleicon.svg";
+import appleicon from "/images/appleicon.svg";
 
 // import ucgenicon from "../src/assets/images/ucgenicon.svg";
-import ucgenicon from "./images/ucgenicon.svg";
+import ucgenicon from "/images/ucgenicon.svg";
 
-import mobilescreens from "./images/mobile-screens.svg";
+import mobilescreens from "/images/mobile-screens.svg";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,11 +24,13 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
 
   useEffect(() => {
     const getData = async () => {
-      console.log("aaaaaaaaa");
-      console.log(data);
       setLoading(true);
       try {
         const res = await fetch(
@@ -36,7 +38,6 @@ export default function Home() {
         );
         if (!res.ok) throw new Error("Veri çekilemedi!");
         const json = await res.json();
-        console.log(json.data[0]);
 
         const cleanedData = json.data.map((item) => ({
           ...item,
@@ -52,10 +53,8 @@ export default function Home() {
     };
 
     getData();
-    console.log(data);
   }, []);
-  console.log("ssssssssssssss");
-  console.log(data[0]);
+
   //const resim = "Irishcoffee.png";
   return (
     <>
@@ -101,19 +100,29 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="slidercontainer">
-          <span className="sldierfavouritetitle">
-            Choose your{" "}
-            <span style={{ color: "#b0907a", display: "inline-block" }}>
-              favorite
-            </span>{" "}
-            coffee
-          </span>
-          {loading ? (
-            <p>⏳ Yükleniyor...</p>
-          ) : error ? (
-            <p style={{ color: "red" }}>❌ Hata: {error}</p>
-          ) : data && data.length > 0 ? (
+        {loading ? (
+          <p>⏳ Loading...</p>
+        ) : error ? (
+          <p
+            style={{
+              color: "red",
+              display: "flex",
+              fontSize: "20px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            ❌ something went wrong please refresh page!
+          </p>
+        ) : data && data.length > 0 ? (
+          <div className="slidercontainer">
+            <span className="sldierfavouritetitle">
+              Choose your{" "}
+              <span style={{ color: "#b0907a", display: "inline-block" }}>
+                favorite
+              </span>{" "}
+              coffee
+            </span>
             <div className="slider">
               <div className="prevBtn">&lt;-</div>
               <div className="swipercontainer">
@@ -125,33 +134,25 @@ export default function Home() {
                   }}
                   spaceBetween={30}
                   loop={true}
-                  pagination={{
-                    clickable: true,
-                  }}
+                  pagination={{ clickable: true }}
                   autoplay={{
-                    delay: 3000, // 3 saniyede bir geçiş yapar
-                    disableOnInteraction: false, // kullanıcı dokunsa bile devam etsin
+                    delay: 3000,
+                    disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                   }}
-                  //navigation={true}
                   modules={[Pagination, Navigation, Autoplay]}
                   className="mySwiper"
-                  // style={{ display: "flex", width: "500px", height: "500px" }}
                   breakpoints={{
-                    0: {
-                      allowTouchMove: true, // 768 altı: kaydırma aktif
-                    },
-                    768: {
-                      allowTouchMove: false, // 768 ve üzeri: kaydırma devre dışı
-                    },
+                    0: { allowTouchMove: true },
+                    768: { allowTouchMove: false },
                   }}
                 >
                   {data.map((item) => (
-                    <SwiperSlide>
-                      <div className="swiperslideici" style={{}}>
+                    <SwiperSlide key={item.id}>
+                      <div className="swiperslideici">
                         <img
                           src={`./images/${item.imageUrl}.png`}
-                          alt="asd"
+                          alt={item.name}
                           className="swiperslideresim"
                         />
                         <div className="sliderdescriptioncontainer">
@@ -159,7 +160,21 @@ export default function Home() {
                           <span className="itemdescriptipon">
                             {item.description}
                           </span>
-                          <span className="itemprice">${item.price}</span>
+                          {user ? (
+                            <div className="homesliderfiyat">
+                              <span className="homeslidergercekfiyat">
+                                ${item.price}
+                              </span>
+                              <span className="homesliderdisfiyat">
+                                $
+                                {item.discountPrice
+                                  ? item.discountPrice
+                                  : item.price}
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="itemprice">${item.price}</span>
+                          )}
                         </div>
                       </div>
                     </SwiperSlide>
@@ -168,24 +183,11 @@ export default function Home() {
               </div>
               <div className="nextBtn">-&gt;</div>
             </div>
-          ) : (
-            <p>⚠️ Veri bulunamadı</p>
-          )}
-          {/* {loading ? (
-            <p>⏳ Yükleniyor...</p>
-          ) : error ? (
-            <p style={{ color: "red" }}>❌ Hata: {error}</p>
-          ) : data && data.length > 0 ? (
-            <ul>
-              {data.map((item) => (
-                <li key={item.id}>{item.name}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>⚠️ Veri bulunamadı</p>
-            id="about"
-          )} */}
-        </div>
+          </div>
+        ) : (
+          <p>⚠️ something went wrong please refresh page!</p>
+        )}
+
         <div className={classes.about}>
           <span className={classes.perfectler}>
             Resource is{" "}
