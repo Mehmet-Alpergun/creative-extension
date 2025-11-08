@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
 import classes from "./Home.module.css";
-import video from "./assets/images/2909914-uhd_3840_2024_24fps.mp4";
-import coffecup from "./assets/images/coffee-cup.png";
+// import video from "./assets/images/2909914-uhd_3840_2024_24fps.mp4";
+import video from "/images/2909914-uhd_3840_2024_24fps.mp4";
+
+import coffecup from "/images/coffee-cup.png";
 import { useEffect, useState } from "react";
 import "./sliderSection.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import appleicon from "../src/assets/images/appleicon.svg";
-import ucgenicon from "../src/assets/images/ucgenicon.svg";
-import mobilescreens from "../src/assets/images/mobilescreens.svg";
+// import appleicon from "../src/assets/images/appleicon.svg";
+import appleicon from "/images/appleicon.svg";
+
+// import ucgenicon from "../src/assets/images/ucgenicon.svg";
+import ucgenicon from "/images/ucgenicon.svg";
+
+import mobilescreens from "/images/mobile-screens.svg";
 
 import "swiper/css";
 import "swiper/css/pagination";

@@ -1,10 +1,10 @@
 import classes from "./Footer.module.css";
-import twitter from "../assets/images/twitter.png";
-import instagram from "../assets/images/instagram.png";
-import facebook from "../assets/images/facebook.png";
-import konum from "../assets/images/konum.png";
-import phone from "../assets/images/phone.png";
-import clock from "../assets/images/clock.png";
+import twitter from "/images/twitter.png";
+import instagram from "/images/instagram.png";
+import facebook from "/images/facebook.png";
+import konum from "/images/konum.png";
+import phone from "/images/phone.png";
+import clock from "/images/clock.png";
 
 export default function Footer() {
   return (
