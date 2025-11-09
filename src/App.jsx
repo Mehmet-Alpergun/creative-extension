@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import Root from "./Root";
 import Register from "./Register";
@@ -8,7 +8,7 @@ import Menu from "./Menu";
 import Order from "./Order";
 import Contactus from "./Contactus";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
