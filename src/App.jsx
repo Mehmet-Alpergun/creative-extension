@@ -6,6 +6,7 @@ import Register from "./Register";
 import Signin from "./Signin";
 import Menu from "./Menu";
 import Order from "./Order";
+import Contactus from "./Contactus";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/signin", element: <Signin /> },
       { path: "/products", element: <Menu /> },
       { path: "/order", element: <Order /> },
+      { path: "/contactus", element: <Contactus /> },
     ],
   },
 ]);

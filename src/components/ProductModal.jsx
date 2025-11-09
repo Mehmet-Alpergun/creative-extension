@@ -13,6 +13,7 @@ export default function ProductModal({ product, onClose }) {
   const [user, setUser] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
   const [discountedPrice, setDiscountedPrice] = useState(0);
+
   useEffect(() => {
     const handleEsc = (event) => {
       if (event.key === "Escape") {
@@ -171,11 +172,9 @@ export default function ProductModal({ product, onClose }) {
     // const updatedCart = [...currentCart, newItem];
     // localStorage.setItem("selectedProducts", JSON.stringify(updatedCart));
     dispatch(addtocart(newItem));
-
     alert(`${product.name} added to cart!`);
     onClose();
   };
-
   if (loading) {
     return (
       <div className="modal-container">

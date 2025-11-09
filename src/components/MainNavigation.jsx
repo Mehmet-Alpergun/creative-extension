@@ -60,7 +60,12 @@ export default function MainNavigation() {
               <li>Favorite coffee</li>
               <li>About</li>
               <li>Mobile app</li>
-              <li>Contact us</li>
+              <Link
+                to={"/contactus"}
+                style={{ textDecoration: "none", color: "#403f3d" }}
+              >
+                Contact us
+              </Link>
             </ul>
           </div>
           <div className={classes.mobildekicartveindirim}>

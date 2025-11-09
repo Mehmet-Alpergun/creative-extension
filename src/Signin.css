@@ -51,6 +51,11 @@
   background: transparent;
   color: #403f3d;
   font-weight: 600;
+  cursor: pointer;
+}
+.kayitolbutonu:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
 }
 .input-error {
   border: 2px solid red;

@@ -51,6 +51,10 @@
   align-items: center;
   text-decoration: none;
 }
+.signinbutonu:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
+}
 .registerbutonu {
   width: 200px;
   height: 44px;
@@ -64,6 +68,10 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+.registerbutonu:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
 }
 .confirmbutonu {
   width: 1360px;
@@ -81,6 +89,10 @@
   color: #403f3d;
   cursor: pointer;
   font-weight: 600;
+}
+.confirm:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
 }
 .userresultcontainer {
   display: flex;

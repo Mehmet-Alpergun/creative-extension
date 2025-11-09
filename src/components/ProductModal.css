@@ -184,6 +184,7 @@
   border: 1px solid #665f55;
   background-color: #e1d4c9;
   cursor: pointer;
+  color: #403f3d;
 }
 .addtoproduct:hover {
   background-color: #665f55;
@@ -314,5 +315,30 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;
+  }
+}
+.success-message {
+  margin-top: 10px;
+  color: #2ecc71;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
   }
 }
