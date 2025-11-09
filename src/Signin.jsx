@@ -124,44 +124,19 @@ export default function Signin() {
           alignItems: "center",
         }}
       >
-        <div
-          style={{
-            width: "1360px",
-            height: "391px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "40px",
-            alignItems: "center",
-          }}
-        >
+        <div className="yazidadahil">
           <span
             style={{ fontSize: "60px", fontWeight: "600", color: "#403f3d" }}
           >
             Sign in
           </span>
-          <div
-            style={{
-              width: "1360px",
-              height: "276px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
+          <div className="formustu">
             <form
               autoComplete="off"
               style={{ display: "flex", flexDirection: "column", gap: "40px" }}
               onSubmit={handleSubmit}
             >
-              <div
-                style={{
-                  width: "1360px",
-                  height: "192px",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "24px",
-                  alignItems: "center",
-                }}
-              >
+              <div className="formalti">
                 <div className="signlogin">
                   <label htmlFor="login">Login</label>
                   <input

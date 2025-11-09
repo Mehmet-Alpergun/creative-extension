@@ -1,16 +1,38 @@
+.yazidadahil {
+  width: 348px;
+  height: 391px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.formustu {
+  width: 348px;
+  height: 276px;
+  display: flex;
+  justify-content: center;
+}
+.formalti {
+  width: 348px;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
 .signlogininput {
   padding-left: 12px;
   padding-right: 12px;
   box-sizing: border-box;
   border: 1px solid #c1b6ad;
-  width: 400px;
+  width: 200px;
   height: 56px;
   border-radius: 12px;
   background-color: transparent;
   font-size: 16px;
 }
 .signlogin {
-  width: 400px;
+  width: 200px;
   /*height: 84px;*/
   height: 99px;
   display: flex;
@@ -18,7 +40,7 @@
   gap: 4px;
 }
 .siginpassword {
-  width: 400px;
+  width: 200px;
   /*height: 84px;*/
   height: 99px;
   display: flex;
@@ -30,14 +52,14 @@
   padding-right: 12px;
   box-sizing: border-box;
   border: 1px solid #c1b6ad;
-  width: 400px;
+  width: 200px;
   height: 56px;
   border-radius: 12px;
   background-color: transparent;
   font-size: 16px;
 }
 .butonundivi {
-  width: 1360px;
+  width: 348px;
   height: 44px;
   display: flex;
   justify-content: center;
@@ -68,4 +90,100 @@
   display: flex;
   justify-content: center;
   color: red;
+}
+
+@media (min-width: 768px) {
+  .yazidadahil {
+    width: 688px;
+    height: 391px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .formustu {
+    width: 688px;
+    height: 276px;
+    display: flex;
+    justify-content: center;
+  }
+  .formalti {
+    width: 688px;
+    height: 192px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .signlogininput {
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    border: 1px solid #c1b6ad;
+    width: 400px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+  .signlogin {
+    width: 400px;
+    /*height: 84px;*/
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .siginpassword {
+    width: 400px;
+    /*height: 84px;*/
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .siginpasswordinput {
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    border: 1px solid #c1b6ad;
+    width: 400px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+  .butonundivi {
+    width: 688px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .kayitolbutonu {
+    width: 200px;
+    height: 44px;
+    border-radius: 22px;
+    border: 1px solid #665f55;
+    background: transparent;
+    color: #403f3d;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .kayitolbutonu:hover {
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
+  .input-error {
+    border: 2px solid red;
+  }
+
+  .input-success {
+    border: 2px solid green;
+  }
+  .hata {
+    display: flex;
+    justify-content: center;
+    color: red;
+  }
 }

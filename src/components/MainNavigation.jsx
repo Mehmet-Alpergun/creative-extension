@@ -104,7 +104,12 @@ export default function MainNavigation() {
               <li>Favorite coffee</li>
               <li>About</li>
               <li>Mobile app</li>
-              <li>Contact us</li>
+              <Link
+                to={"/contactus"}
+                style={{ textDecoration: "none", color: "#403f3d" }}
+              >
+                Contact us
+              </Link>
             </ul>
             <Link to="/products" className={classes.menucofeecup}>
               <span>Menu</span>
@@ -114,14 +119,34 @@ export default function MainNavigation() {
                 className="mobildekikahveresmi"
               />
             </Link>
-            <Link to="/order" className={classes.menucart}>
+            {/* <Link to="/order" className={classes.menucart}>
               <span>Cart</span>
               <img
                 src={shoppingbag}
                 alt="coffeecup"
                 className="mobildekisepetresmi"
               />
-            </Link>
+            </Link> */}
+            {showCartIcon && (
+              <Link to="/order" className={classes.menucart}>
+                <span>Cart</span>
+                <img
+                  src={shoppingbag}
+                  alt="coffeecup"
+                  className="mobildekisepetresmi"
+                />
+                <span>{productNumber > 0 ? productNumber : ""}</span>
+                {user ? (
+                  <span className={classes.negotiotion}>
+                    {toplamNegotiation == 0
+                      ? ""
+                      : parseFloat(toplamNegotiation).toFixed(2)}
+                  </span>
+                ) : (
+                  ""
+                )}
+              </Link>
+            )}
           </nav>
         )}
       </header>
