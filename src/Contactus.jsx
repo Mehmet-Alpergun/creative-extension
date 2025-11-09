@@ -66,7 +66,7 @@ export default function Contactus() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "40px",
+        gap: "10px",
       }}
     >
       <span className="cotactyazi">Contact us</span>
