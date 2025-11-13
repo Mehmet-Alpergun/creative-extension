@@ -164,7 +164,8 @@ export default function Register() {
         );
         // Kayıt başarılı → menu sayfasına yönlendir
         setIsSubmitting(false);
-        setTimeout(() => navigate("/"), 1500);
+        navigate("/order");
+        window.location.reload();
       } else {
         // API hatası varsa göster
         console.log(data);

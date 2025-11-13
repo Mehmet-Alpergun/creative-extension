@@ -98,7 +98,8 @@ export default function Signin() {
         localStorage.setItem("user", JSON.stringify(user));
 
         setIsSubmitting(false);
-        setTimeout(() => navigate("/"), 1500);
+        navigate("/order");
+        window.location.reload();
       } else {
         setApiError(data.error || "Registration failed");
         setTimeout(() => {

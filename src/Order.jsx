@@ -156,7 +156,7 @@ export default function Order() {
                       <span className="proname">{pro.name}</span>
                       <span>
                         {pro.sizeLabel},{" "}
-                        {pro.selectedAdditives?.map((ad) => ` ${ad.name}, .`)}
+                        {pro.selectedAdditives?.map((ad) => ` ${ad.name}, `)}
                       </span>
                     </div>
                     <div className="userurunfiyati">
@@ -188,7 +188,7 @@ export default function Order() {
                     <span className="proname">{pro.name}</span>
                     <span>
                       {pro.sizeLabel},{" "}
-                      {pro.selectedAdditives?.map((ad) => ` ${ad.name}, .`)}
+                      {pro.selectedAdditives?.map((ad) => ` ${ad.name}, `)}
                     </span>
                   </div>
                   <div className="urunfiyati">
