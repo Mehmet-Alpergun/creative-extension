@@ -73,7 +73,10 @@
   align-items: center;
   cursor: pointer;
 }
-
+.butonundur:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
+}
 @media (min-width: 768px) {
   .cotactyazi {
     height: 75px;
