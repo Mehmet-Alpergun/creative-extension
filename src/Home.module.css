@@ -88,7 +88,7 @@
   width: 348px;
   height: 590px;
   object-fit: cover;
-  background-image: url("./images/column-1.png");
+  background-image: url("/images/column-1.png");
   background-size: cover; /* Bu satır eklendi */
   background-position: center; /* Opsiyonel ama önerilir */
   background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -99,7 +99,7 @@
   width: 348px;
   height: 590px;
   object-fit: cover;
-  background-image: url("./images/column-2.png");
+  background-image: url("/images/column-2.png");
   background-size: cover; /* Bu satır eklendi */
   background-position: center; /* Opsiyonel ama önerilir */
   background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -233,7 +233,7 @@
     width: 688px;
     height: 590px;
     object-fit: cover;
-    background-image: url("../images/column-1.png");
+    background-image: url("/images/column-1.png");
     background-size: cover; /* Bu satır eklendi */
     background-position: center; /* Opsiyonel ama önerilir */
     background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -243,7 +243,7 @@
     width: 688px;
     height: 590px;
     object-fit: cover;
-    background-image: url("../images/column-2.png");
+    background-image: url("/images/column-2.png");
     background-size: cover; /* Bu satır eklendi */
     background-position: center; /* Opsiyonel ama önerilir */
     background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -367,7 +367,7 @@
     width: 660px;
     height: 590px;
     object-fit: cover;
-    background-image: url("../images/column-1.png");
+    background-image: url("/images/column-1.png");
     background-size: cover; /* Bu satır eklendi */
     background-position: center; /* Opsiyonel ama önerilir */
     background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -377,7 +377,7 @@
     width: 660px;
     height: 430px;
     object-fit: cover;
-    background-image: url("../images/box.png");
+    background-image: url("/images/box.png");
     background-size: cover; /* Bu satır eklendi */
     background-position: center; /* Opsiyonel ama önerilir */
     background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -387,7 +387,7 @@
     width: 660px;
     height: 430px;
     object-fit: cover;
-    background-image: url("../images/manbox.png");
+    background-image: url("/images/manbox.png");
     background-size: cover; /* Bu satır eklendi */
     background-position: center; /* Opsiyonel ama önerilir */
     background-repeat: no-repeat; /* Tekrarlamasın diye */
@@ -397,7 +397,7 @@
     width: 660px;
     height: 590px;
     object-fit: cover;
-    background-image: url("../images/column-2.png");
+    background-image: url("/images/column-2.png");
     background-size: cover; /* Bu satır eklendi */
     background-position: center; /* Opsiyonel ama önerilir */
     background-repeat: no-repeat; /* Tekrarlamasın diye */

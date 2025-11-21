@@ -9,7 +9,13 @@ import clock from "/images/clock.png";
 export default function Footer() {
   return (
     <>
-      <footer style={{ marginTop: "100px" }}>
+      <footer
+        style={{
+          marginTop: "100px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <div className={classes.footerContainer}>
           <div className={classes.offer}>
             <div className="footerspanyazisi">

@@ -350,7 +350,7 @@ export default function Register() {
                   </div>
                 </div>
               </div>
-              <div className="butonundivi">
+              <div className="butonundivik">
                 <button
                   className="kayitolbutonu"
                   type="submit"
